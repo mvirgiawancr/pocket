@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pocket — Save the change</title>
+<meta name="description" content="Pocket rounds up every card purchase and tucks the change away. A concept savings app by mvirgiawancr.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23F2B632'/><circle cx='16' cy='16' r='8' fill='none' stroke='%23C9901A' stroke-width='3'/></svg>">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav-slab">
+  <a class="slab-mark" href="#top" aria-label="Pocket home">P<span class="coin-o" aria-hidden="true"></span>CKET</a>
+  <nav class="slab-nav" aria-label="Primary">
+    <ul>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn--slab" href="#join">Join the waitlist</a>
+</header>
+
+<main id="main">
+  <!-- hero -->
+  <section class="hero" id="top">
+    <div class="hero__copy">
+      <h1 class="hero__title">Save the <span class="accent">change</span>.</h1>
+      <p class="hero__lede">Pocket rounds up every card purchase to the next dollar and tucks the difference away. You spend like normal. Your savings grow on their own.</p>
+      <form class="cta-form" data-waitlist novalidate>
+        <label for="email-hero" class="visually-hidden">Email address</label>
+        <input id="email-hero" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="btn" type="submit">Join the waitlist</button>
+        <p class="cta-form__msg" role="status" aria-live="polite"></p>
+      </form>
+      <p class="hero__note">Concept app · nothing is sent, try the flow freely</p>
+    </div>
+
+    <div class="hero__art" aria-label="Example: a $4.60 coffee is rounded up, and 40 cents moves to Pocket">
+      <div class="ui ui--tx">
+        <span class="ui__icon" aria-hidden="true">C</span>
+        <span class="ui__name">Corner Coffee<small>Card · 8:14 am</small></span>
+        <span class="ui__amt mono">−$4.60</span>
+      </div>
+      <div class="ui ui--round">
+        <span class="mono">+$0.40</span> rounded up to Pocket
+      </div>
+      <div class="ui ui--balance">
+        <p class="ui__label">Your Pocket</p>
+        <p class="ui__big mono">$186.40</p>
+        <div class="bars" aria-hidden="true"><i style="--h:.35"></i><i style="--h:.5"></i><i style="--h:.42"></i><i style="--h:.66"></i><i style="--h:.58"></i><i style="--h:.8"></i><i style="--h:1"></i></div>
+        <p class="ui__foot">Example balance</p>
+      </div>
+      <span class="coin coin--hero" aria-hidden="true"></span>
+    </div>
+  </section>
+
+  <!-- narrative workflow -->
+  <section class="how" id="how" aria-labelledby="how-title">
+    <h2 id="how-title" class="section-title">How Pocket works</h2>
+
+    <article class="stage reveal">
+      <p class="stage__num">1.0</p>
+      <div class="stage__body">
+        <h3>Spend like you always do</h3>
+        <p>Link your debit card once. Coffee, groceries, a train ticket: nothing about how you pay changes.</p>
+      </div>
+      <div class="stage__art">
+        <div class="ui ui--tx ui--flat"><span class="ui__icon" aria-hidden="true">G</span><span class="ui__name">Groceries<small>Card · Tue</small></span><span class="ui__amt mono">−$23.15</span></div>
+      </div>
+    </article>
+
+    <article class="stage reveal">
+      <p class="stage__num">2.0</p>
+      <div class="stage__body">
+        <h3>We round it up</h3>
+        <p>Every purchase is rounded up to the next dollar. The small difference is the part you won't miss.</p>
+      </div>
+      <div class="stage__art stage__art--round">
+        <span class="mono price" data-round="23.15">$23.15</span>
+        <span class="arrow" aria-hidden="true">→</span>
+        <span class="mono price price--up">$24.00</span>
+        <span class="chip mono">+85¢</span>
+      </div>
+    </article>
+
+    <article class="stage reveal">
+      <p class="stage__num">3.0</p>
+      <div class="stage__body">
+        <h3>The change lands in your Pocket</h3>
+        <p>Round-ups move to a separate savings pot. Move them back to your account whenever you need to.</p>
+      </div>
+      <div class="stage__art stage__art--pocket">
+        <div class="pocket-shape"><span class="coin coin--sm"></span><span class="coin coin--sm"></span><span class="coin coin--sm"></span></div>
+        <p class="pocket-count">Example: 12 round-ups this week</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- the one dark band -->
+  <section class="band" aria-labelledby="grow-title">
+    <div class="band__inner">
+      <article class="stage stage--dark reveal">
+        <p class="stage__num">4.0</p>
+        <div class="stage__body">
+          <h3 id="grow-title">Watch it add up</h3>
+          <p>A weekly recap shows what you saved and what it was for. Set a goal, pause round-ups, or cap them per week.</p>
+        </div>
+        <div class="stage__art">
+          <div class="ui ui--recap">
+            <p class="ui__label">This week</p>
+            <p class="ui__big mono">+$6.85</p>
+            <ul class="recap">
+              <li><span>Coffee</span><span class="mono">$2.10</span></li>
+              <li><span>Groceries</span><span class="mono">$1.85</span></li>
+              <li><span>Transport</span><span class="mono">$2.90</span></li>
+            </ul>
+            <p class="ui__foot">Example recap</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- faq -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="section-title">Questions</h2>
+    <div class="faq__list">
+      <details>
+        <summary>Is Pocket a real app?</summary>
+        <p>Not yet. Pocket is a concept I designed and built to show how a round-up savings app could look and feel. The waitlist form works, but nothing is sent anywhere.</p>
+      </details>
+      <details>
+        <summary>Where does the money go?</summary>
+        <p>In the concept, round-ups move to a separate savings pot in your name. You can move them back to your main account at any time.</p>
+      </details>
+      <details>
+        <summary>Can I control how much it saves?</summary>
+        <p>Yes. You can pause round-ups, set a weekly cap, or round up to the next five dollars instead of one.</p>
+      </details>
+      <details>
+        <summary>What happens if my balance is low?</summary>
+        <p>Round-ups pause automatically when your account drops below a limit you choose, so saving never gets in the way of paying bills.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- final cta -->
+  <section class="final" id="join" aria-labelledby="join-title">
+    <h2 id="join-title">Start saving the change.</h2>
+    <form class="cta-form" data-waitlist novalidate>
+      <label for="email-final" class="visually-hidden">Email address</label>
+      <input id="email-final" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      <button class="btn" type="submit">Join the waitlist</button>
+      <p class="cta-form__msg" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="foot-marquee" aria-label="Footer">
+  <div class="foot-marquee__track" aria-hidden="true">
+    <span>SAVE THE CHANGE · POCKET · SAVE THE CHANGE · POCKET · SAVE THE CHANGE · POCKET ·</span>
+    <span>SAVE THE CHANGE · POCKET · SAVE THE CHANGE · POCKET · SAVE THE CHANGE · POCKET ·</span>
+  </div>
+  <p class="foot-credit">Pocket is a concept brand · Designed and built by <a href="https://contra.com/moch_virgiawan_caesar_r_w19nvsk6">mvirgiawancr</a></p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
